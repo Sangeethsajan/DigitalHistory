@@ -5,136 +5,40 @@
     <meta charset="utf-8">  
     <title>Add Ground Overlay</title>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>  
-      html, body {  
-        height: 100%;  
-        margin: 0;  
-        padding: 0;  
-      }  
-      #map {  
-        height: 99%; 
-        width: 99%;
-      }  
-    </style>  
-        <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBamd1eGIqdVQ866pMAgY0EVPFU1SNlCfE&callback=initMap&v=weekly"
-        defer
-      ></script>
-      
-    <script>  
-// This example uses a GroundOverlay to place an image on the map   
-var historicalOverlay;  
-  
-function initMap() {
-  var lat_lng = {lat: 21.150362668823664,lng: 79.08054606894694};
-  var locations = [
-      ['Kumarapuram', 8.510259, 76.932750, 4]
-    ];
-  var map = new google.maps.Map(document.getElementById('map'), {  
-    zoom: 3,
-    minZoom: 5,  
-    center: lat_lng  
-  });  
-  var imageBounds = new google.maps.LatLngBounds(      
-        new google.maps.LatLng(5,66.572058),      
-        new google.maps.LatLng(37.749440, 98.2404));
-  
-  historicalOverlay = new google.maps.GroundOverlay(  
-      './Images/Map-India1857.jpg',  
-      imageBounds);  
-  historicalOverlay.setMap(map);  
-  var infowindow = new google.maps.InfoWindow();
-
-    var marker, i;
-    
-    for (i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
-      
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
-}  
-function One() {
-  var lat_lng = {lat: 22.649965,lng: 88.423379};
-  var locations = [
-      ['Dum Dum', 22.649965, 88.423379, 4]
-    ];
-  var map = new google.maps.Map(document.getElementById('map'), {  
-    zoom: 5,
-    minZoom: 6,  
-    center: lat_lng  
-  });  
-  var imageBounds = new google.maps.LatLngBounds(      
-        new google.maps.LatLng(5,66.572058),      
-        new google.maps.LatLng(37.749440, 98.2404));
-  
-  historicalOverlay = new google.maps.GroundOverlay(  
-      './Images/Map-India1857.jpg',  
-      imageBounds);  
-  historicalOverlay.setMap(map); 
-  const contentString =
-    '<div style="color:black;" id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
-    '<h1 id="firstHeading" class="firstHeading">January 1857</h1>' +
-    '<h4>The case of the infamous greased Enfield rifles</h4>'+
-    '<div id="bodyContent">' +
-    "<p> The new rifles from the Crimean War in 1853 were introduced in India and were tried by the sepoys in Dum Dum, Ambala, and Sialkot " +
-    "However, soon, the rumor spread that the cartridge for the new Enfield rifle, which had to be bitten off by mouth, contained cow and pig fat, which were opposed to the native religious sensibilities. " +
-    "This was the immediate trigger that set off the revolt. " +
-    "However, the developments were not entirely a product of these religious sentiments but rather a culmination of the longer history of grievances of the sepoys." +
-    "</p>" +
-    "</div>" +
-    "</div>"; 
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString,
-    ariaLabel: "Uluru",
-  });
-
-    var marker, i;
-    
-    for (i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
-      
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
-}  
-
   </script>  
   </head>  
   <body class="bg-dark">  
-    
-    <div class="container text-light">
-        <h2 class="display-3"> The Revolt of 1857</h2>
-        <div class="row">
-            <div class="col-md-6">
-                
-                <h1>Time Line</h1>
-                
-                <ol>
-                  <li onclick="One()"><a style="text-decoration: none;">January-April 1857</a></li>
-                  
-                </l>
-            </div>
-            <div class="col-md-6" style="min-height: 800px;;">
-                
-                <div id="map"></div> 
-            </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">The Revolt of 1857</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="map.html">Map</a>
+            </li>
+          </ul>
+          
         </div>
+      </div>
+    </nav>
+    <div class="container vertical-scrollable text-light mt-5">
+        <h3 class="display-3">Introduction</h3>
+        <p>
+            This project presents a cartographic narrative of some of the major events in the Revolt of 1857 in India. The Revolt began as a mutiny in the Bengal army of the East India Company in the northern part of the country. It immediately spread to different parts of British India and various classes, thus acquiring the nature of a popular uprising against foreign rule. The Revolt of 1857 was the largest and the most serious threat the East India Company had to face in the subcontinent.
+        </p>
+        <p>
+            The scale of the revolt, the complexity of the events, and the nature of Imperial documentation present some difficulties in layering out the events temporally and spatially, especially in understanding the native mobilization and tactics. Due to these constraints, the scope of the project is limited to the major events that took place between May 1857 and March 1858 in the cities of Meerut, Delhi, and Lucknow, which were central to the overall trajectory and outcome of the uprising.
+        </p>
+        <p>
+            Notwithstanding the limitations, this cartographic representation aims to help students, teachers, and history enthusiasts gain a virtual and cartographic understanding of the Revolt of 1857. 
+
+        </p>
     </div>
     
      

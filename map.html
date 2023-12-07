@@ -1,0 +1,376 @@
+<!DOCTYPE html>  
+<html>  
+  <head>  <!-- www.techstrikers.com -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">  
+    <meta charset="utf-8">  
+    <title>Add Ground Overlay</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>  
+      html, body {  
+        height: 100%;  
+        margin: 0;  
+        padding: 0;  
+      }  
+      #map {  
+        height: 99%; 
+        width: 99%;
+      } 
+      
+    </style>  
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBamd1eGIqdVQ866pMAgY0EVPFU1SNlCfE&callback=initMap&v=weekly"
+        defer
+      ></script>
+      
+    <script>  
+// This example uses a GroundOverlay to place an image on the map   
+var historicalOverlay;  
+  
+function initMap() {
+  var lat_lng = {lat: 22.150362668823664,lng: 81.08054606894694};
+  var locations = [
+      ['Ambala', 30.378180, 76.776695, 4],
+      ['Sialkot', 32.497223, 74.536110, 4],
+      ['Dum Dum', 22.649965, 88.423379, 4],
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 3,
+    minZoom: 5,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map);  
+  var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function One() {
+  var lat_lng = {lat: 28.984644,lng: 77.705956};
+  var locations = [
+      ['Meerut', 28.984644, 77.705956, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Sepoys were court-martialed on April 9, 1857</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Two() {
+  var lat_lng = {lat: 28.998794995085582,lng: 77.6908577397332};
+  var locations = [
+      ['Meerut', 28.998794995085582, 77.6908577397332, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Mutiny broke out in Meerut</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Three() {
+  var lat_lng = {lat: 28.656473,lng: 77.242943};
+  var locations = [
+      ['Meerut', 28.656473, 77.242943, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>The rebels declared Bahadur Shah Zafar as their leader</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+
+  </script>  
+  </head>  
+  <body class="bg-dark">  
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">The Revolt of 1857</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="map.html">Map</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="container vertical-scrollable text-light mt-5">
+        <div class="row ">
+            <div data-bs-spy="scroll" style="height: 700px;" class="col-md-6 overflow-scroll">
+                
+                <h1>Timeline</h1>
+                <div id="carouselExampleDark" class="carousel carousel-dark">
+                  
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          January-April 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">The introduction of Enfield rifles</h5>
+                          <p class="card-text">The new rifles from the Crimean War in 1853 were introduced in India and were tried by the sepoys in Dum Dum, Ambala, and Sialkot. However, soon, the rumor spread that the cartridge for the new Enfield rifle, which had to be bitten off by mouth, contained cow and pig fat, which were opposed to the native religious sensibilities. This was the immediate trigger that set off the revolt. However, the developments were not entirely a product of these religious sentiments but rather a culmination of the longer history of grievances of the sepoys.                          </p>
+                          <button onclick="One()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          April 24 - May 9, 185
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Sepoys were court-martialed on April 9, 1857</h5>
+                          <p class="card-text"> The Enfield rifle was introduced in the Meerut cantonment. The Indian sepoys refused to use the new rifle. The sepoys who refused to use the new rifle were dismissed from service and imprisoned for ten years.                          </p>
+                          <button onclick="Two()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="initMap()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">A mutiny of sepoys erupted in the Meerut garrison. The mutineers released the imprisoned brethren, killed many British officers, and set fire to buildings. The rebellion spread across the town. The next day, mutineers marched from Meerut to Delhi, which was about 40 miles away. Many soldiers and civilians joined the rebel march enroute.                          </p>
+                          <button onclick="Three()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="One()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 11- 12, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">The rebels declared Bahadur Shah Zafar as their leader,</h5>
+                          <p class="card-text">The mutineers from Meerut reached Delhi on the 11th and appealed to the pensioner Mughal emperor Bahadur Shah II to lead their revolt. By this time, almost half of the entire 2,32,224 sepoys of the Company rose up against them. As the rebel march reached Delhi, the sepoy garrison there also joined the group. The rebels proclaimed the emperor Bahadur Shah II as the Emperor of India.                           </p>
+                          <button onclick="Three()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Two()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 10, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                  
+                </div>
+            </div>
+            <div class="col-md-6" style="min-height: 800px;;">
+                
+                <div id="map"></div> 
+            </div>
+        </div>
+    </div>
+    
+     
+  </body> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+</html>
