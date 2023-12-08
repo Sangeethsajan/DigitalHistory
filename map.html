@@ -190,6 +190,511 @@ function Three() {
       })(marker, i));
     }
 }  
+function Four() {
+  var lat_lng = {lat: 28.734545,lng: 77.153444};
+  var locations = [
+      ['Six miles northwest of Delhi', 28.734545, 77.153444, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Battle of Badli-ki-Serai</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+} 
+function Five() {
+  var lat_lng = {lat: 28.7041,lng: 77.1025};
+  var locations = [
+      ['Delhi', 28.7041, 77.1025, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Bakht Khan was appointed as the Commander-in-chief</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Six() {
+  var lat_lng = {lat: 28.656473,lng: 77.242943};
+  var locations = [
+      ['Red Fort', 28.656473, 77.242943, 4],
+      ['Red Fort', 16.8409, 96.1735, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>The capture and exile of Bahadur Shah Zafar</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Seven() {
+  var lat_lng = {lat: 26.860910688752497,lng: 80.92676849512705};
+  var locations = [
+      ['Red Fort', 26.860910688752497, 80.92676849512705, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Lucknow Residency prepares to defend</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Eight() {
+  var lat_lng = {lat: 26.860910688752497,lng: 80.92676849512705};
+  var locations = [
+      ['Red Fort', 26.860910688752497, 80.92676849512705, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>The beginning of the Siege of Lucknow,</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Nine() {
+  var lat_lng = {lat: 26.879129,lng: 81.040222};
+  var locations = [
+      ['Red Fort', 26.879129, 81.040222, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Battle of Chinhat</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Ten() {
+  var lat_lng = {lat: 26.850000,lng: 80.949997};
+  var locations = [
+      ['Red Fort', 26.850000, 80.949997, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>First ‘Relief’ to Lucknow Residency</h4>'+
+    "</div>"; 
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Eleven() {
+  var lat_lng = {lat: 26.805687,lng: 80.914993};
+  var locations = [
+      ['Red Fort', 26.805687, 80.914993, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Second  ‘Relief’ to Lucknow Residency</h4>'+
+    "</div>";   
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Twelve() {
+  var lat_lng = {lat: 26.805687,lng: 80.914993};
+  var locations = [
+      ['Red Fort', 26.805687, 80.914993, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Nawab of Awadh’s rule declared</h4>'+
+    "</div>";   
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Thirteen() {
+  var lat_lng = {lat: 26.805687,lng: 80.914993};
+  var locations = [
+      ['Lucknow', 26.805687, 80.914993, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>The capture of Lucknow began</h4>'+
+    "</div>";   
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Fourteen() {
+  var lat_lng = {lat: 26.8899,lng: 80.8742};
+  var locations = [
+      ['Musabagh', 26.8899, 80.8742, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>Battle at Musabagh</h4>'+
+    "</div>";   
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
+function Fifteen() {
+  var lat_lng = {lat: 26.850000,lng: 80.949997};
+  var locations = [
+      ['Lucknow', 26.850000, 80.949997, 4]
+    ];
+  var map = new google.maps.Map(document.getElementById('map'), {  
+    zoom: 5,
+    minZoom: 6,  
+    center: lat_lng  
+  });  
+  var imageBounds = new google.maps.LatLngBounds(      
+        new google.maps.LatLng(5,66.572058),      
+        new google.maps.LatLng(37.749440, 98.2404));
+  
+  historicalOverlay = new google.maps.GroundOverlay(  
+      './Images/Map-India1857.jpg',  
+      imageBounds);  
+  historicalOverlay.setMap(map); 
+  const contentString =
+    '<div style="color:black;" id="content">' +
+    '<h4>The recapture of Lucknow</h4>'+
+    "</div>";   
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "Uluru",
+  });
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}  
 
   </script>  
   </head>  
@@ -269,7 +774,7 @@ function Three() {
                         <div class="card-body">
                           <h5 class="card-title">The rebels declared Bahadur Shah Zafar as their leader,</h5>
                           <p class="card-text">The mutineers from Meerut reached Delhi on the 11th and appealed to the pensioner Mughal emperor Bahadur Shah II to lead their revolt. By this time, almost half of the entire 2,32,224 sepoys of the Company rose up against them. As the rebel march reached Delhi, the sepoy garrison there also joined the group. The rebels proclaimed the emperor Bahadur Shah II as the Emperor of India.                           </p>
-                          <button onclick="Three()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Four()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
                           <button onclick="Two()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
 
                         </div>
@@ -278,87 +783,164 @@ function Three() {
                     <div class="carousel-item">
                       <div class="card" style="min-height: 400px;">
                         <div class="card-header">
-                          May 10, 1857
+                          June 8, 1857
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Battle of Badli-ki-Serai</h5>
+                          <p class="card-text">The British captured the Ridge in Delhi, but the attempt to recapture the city was faced with strong resistance from the rebels. The British forces had two successful engagements with the rebels at Ghazi-ud-din Nagar and the river Hindon before the battle of Badli-ki-Serai on June 8. The battle exposed the weaknesses of the rebel front and its lack of coordination. However, the exhausted British forces did not march into the city and recapture it.</p>
+                          <button onclick="Five()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Three()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
                         </div>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="card" style="min-height: 400px;">
                         <div class="card-header">
-                          May 10, 1857
+                          July 3, 1857
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Bakht Khan was appointed as the Commander-in-chief</h5>
+                          <p class="card-text">Bakht Khan, the leader of the sepoy revolt at Bareilly, arrived in Delhi, reinforcing the rebel side</p>
+                          <button onclick="Six()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Four()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          September 14 - 21, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">The capture and exile of Bahadur Shah Zafar</h5>
+                          <p class="card-text">The British forces recaptured Delhi. The last Mughal emperor, Bahadur Shah II, was taken prisoner by Major William Hudson. Zafar was then tried and exiled to Rangoon in British-controlled Burma next year</p>
+                          <button onclick="Seven()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Five()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                          
                         </div>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="card" style="min-height: 400px;">
                         <div class="card-header">
-                          May 10, 1857
+                          May 1857
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Lucknow Residency prepares to defend</h5>
+                          <p class="card-text">The kingdom of Awadh was home to one-third of the native soldiers in the Company army. When the news of the Meerut and Delhi mutiny reached Lucknow on May 14-15, concerns about the uprising began to surface. Henry Lawrence, the British Resident and the Chief Commissioner of Awadh, acquired plenary power and began fortifying the Residency. The military store, ration, garrison, etc. were moved from the cantonment to the Residency. All the British civilians from nearby areas made their way to the residency. By the end of the month, there were around 1000 white (32nd Regiment) and 700 native troops (13th and the 71st N.I) in defense of the Residency. </p>
+                          <button onclick="Eight()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Six()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          May 30, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">The beginning of the Siege of Lucknow</h5>
+                          <p class="card-text">Sepoys from various Bengal and Awadh infantry units revolted, and the uprising spread to the civil and military stations in Awadh (Sitapure, Faizabad, Sultanpur) within the next ten days.</p>
+                          <button onclick="Nine()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Seven()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                         
                         </div>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="card" style="min-height: 400px;">
                         <div class="card-header">
-                          May 10, 1857
+                          June 30, 1857
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Battle of Chinhat</h5>
+                          <p class="card-text">The battle was fought in Chinhat near Lucknow between the rebel forces led by Barkat Ahmad and the Company army. The rebel army consisted of sepoys, armed retainers of the Taluqdars (local powerful landlords), and peasants. The British army made the first attack to stop the rebels from entering Lucknow but had to retreat.                          </p>
+                          <button onclick="Ten()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Eight()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
                         </div>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="card" style="min-height: 400px;">
                         <div class="card-header">
-                          May 10, 1857
+                          September 23, 1857
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="card" style="min-height: 400px;">
-                        <div class="card-header">
-                          May 10, 1857
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="card" style="min-height: 400px;">
-                        <div class="card-header">
-                          May 10, 1857
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Mutiny broke out in Meerut</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">First ‘Relief’ to Lucknow Residency</h5>
+                          <p class="card-text">The residency faced four attacks from the besiegers from July onwards. On September 23, Major-General Henry Havelock made the first attempt to ‘relieve’ Lucknow with 2500 men that he brought from Kanpur. Half of them died during the struggle, and the siege continued.</p>
+                          <button onclick="Eleven()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="11" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Nine()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
                         </div>
                       </div>
                     </div>  
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          November 12-27, 1857
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Second  ‘Relief’ to Lucknow Residency</h5>
+                          <p class="card-text">from Alambagh, moved around the town, through the Dilkusha park, and entered near the residency.) Colin Campbell, Commander-in-Chief of India, with his 5000 men managed to enter the Residency and break the siege. They rescued the garrison and the civilians from the Residency, leaving General James Outram behind at Alambagh with 4000 men.                           </p>
+                          <button onclick="Twelve()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="12" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Ten()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          November- March 1857-58:
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Nawab of Awadh’s rule declared</h5>
+                          <p class="card-text">The rebels took control of the Residency and ruled Lucknow under the name of the Nawab of Awadh Birjis Qadr under the leadership of Begum Hazrat Mahal. The removal of the British flag from the Residency not only signified a long-due military victory for the rebels but also had great political importance.                          </p>
+                          <button onclick="Thirteen()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="13" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Eleven()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="11" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          March 12-18, 1858
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">The capture of Lucknow began</h5>
+                          <p class="card-text">After suppressing the revolt in many parts of the central and North-Western Provinces, Campbell’s forces made their way to capture Lucknow in March 1858 with around 22000 European and native troops. The attack was well-planned and coordinated with Outrum on the Iron Bridge, the main army occupying Dilkusha, and one by one, “fortified palaces, the walled gardens, mosques, and mausoleums were seized.” (Sen 1958, 240) </p>
+                          <button onclick="Fourteen()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="14" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Twelve()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="12" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          March 18-19, 1858
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Battle at Musabagh</h5>
+                          <p class="card-text">The rebel forces began to leave the post as the defense was becoming impossible to carry out. By the end of the day (18th), all the main posts were in British control. The last prominent battle was fought at Musabag, where the rebel forces held the ground till the next day. According to a report, there were around 100,000 rebels in the city, including 35000 sepoys.                           </p>
+                          <button onclick="Fifteen()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="15" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
+                          <button onclick="Thirteen()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="13" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+                        
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="carousel-item">
+                      <div class="card" style="min-height: 400px;">
+                        <div class="card-header">
+                          March 22, 1858
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">The recapture of Lucknow</h5>
+                          <p class="card-text">By the 21st, the city was declared free of rebels, and what followed was destruction and plunder. Lucknow was one of the most crucial battle fronts. The recapture of Lucknow marked the end of native forces' dominance in the struggle and reinstated the British empire in India. </p>
+                          <button onclick="Fourteen()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="14" class=" btn btn-warning active" aria-current="true" aria-label="Slide 1">Back</button>
+
+                        </div>
+                      </div>
+                    </div>  
+                    
                   </div>
                   
                 </div>
