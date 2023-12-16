@@ -654,6 +654,10 @@ function Fourteen() {
     }
 }  
 function Fifteen() {
+
+  var directionsService = new google.maps.DirectionsService();
+  var directionsRenderer = new google.maps.DirectionsRenderer();
+
   var lat_lng = {lat: 26.850000,lng: 80.949997};
   var locations = [
   ['Lucknow', 26.35, 80.835, 4]
@@ -694,7 +698,45 @@ function Fifteen() {
         }
       })(marker, i));
     }
+    var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
+  var request = {
+    origin:start,
+    destination:end,
+    travelMode: 'DRIVING'
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == 'OK') {
+      directionsRenderer.setDirections(response);
+    }
+  });
 }  
+function none(){
+  var directionsService = new google.maps.DirectionsService();
+  var directionsRenderer = new google.maps.DirectionsRenderer();
+  var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+  var mapOptions = {
+    zoom:7,
+    center: chicago
+  }
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  directionsRenderer.setMap(map);
+}
+
+function calcRoute() {
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
+  var request = {
+    origin:start,
+    destination:end,
+    travelMode: 'DRIVING'
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == 'OK') {
+      directionsRenderer.setDirections(response);
+    }
+  });
+}
 
   </script>  
   </head>  
@@ -713,6 +755,12 @@ function Fifteen() {
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="map.html">Map</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="gallery.html">Gallery</a>
+            </li>
           </ul>
           
         </div>
@@ -728,10 +776,11 @@ function Fifteen() {
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <div class="card" style="min-height: 400px;">
-                        <div class="card-header">
-                          January-April 1857
-                        </div>
-                        <div class="card-body">
+                        <img src="./Images/4.png" class="card-img opacity-50" alt="...">
+                        <div class="card-img-overlay">
+                          <div class="card-header">
+                            January-April 1857
+                          </div>
                           <h5 class="card-title">The introduction of Enfield rifles</h5>
                           <p class="card-text">The new rifles from the Crimean War in 1853 were introduced in India and were tried by the sepoys in Dum Dum, Ambala, and Sialkot. However, soon, the rumor spread that the cartridge for the new Enfield rifle, which had to be bitten off by mouth, contained cow and pig fat, which were opposed to the native religious sensibilities. This was the immediate trigger that set off the revolt. However, the developments were not entirely a product of these religious sentiments but rather a culmination of the longer history of grievances of the sepoys.                          </p>
                           <button onclick="One()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
@@ -740,10 +789,13 @@ function Fifteen() {
                     </div>
                     <div class="carousel-item">
                       <div class="card" style="min-height: 400px;">
-                        <div class="card-header">
-                          April 24 - May 9, 185
-                        </div>
-                        <div class="card-body">
+                        <img src="./Images/4.png" class="card-img opacity-50" alt="...">
+
+                        
+                        <div class="card-img-overlay">
+                          <div class="card-header">
+                            April 24 - May 9, 185
+                          </div>
                           <h5 class="card-title">Sepoys were court-martialed on April 9, 1857</h5>
                           <p class="card-text"> The Enfield rifle was introduced in the Meerut cantonment. The Indian sepoys refused to use the new rifle. The sepoys who refused to use the new rifle were dismissed from service and imprisoned for ten years.                          </p>
                           <button onclick="Two()" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class=" btn btn-primary active" aria-current="true" aria-label="Slide 1">Next</button>
